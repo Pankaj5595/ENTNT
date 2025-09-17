@@ -17,24 +17,25 @@ function HomePage({ setIsLoggedIn }) {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-purple-100">
-			<div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+			<div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
 				<div className="text-center">
-					<h1 className="text-5xl font-extrabold text-gray-900 sm:text-6xl md:text-7xl">
-						Welcome to{" "}
+					<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+						Welcome to{' '}
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
 							TalentFlow
 						</span>
 					</h1>
-					   <p className="mt-3 max-w-2xl mx-auto text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-						   TalentFlow is your all-in-one hiring solution designed for modern teams and ambitious job seekers. Effortlessly manage job postings, track candidates through every stage, and create smart assessments to find the perfect fit. Our intuitive platform streamlines recruitment, saves time, and helps you build winning teams with confidence.<br /><br />
-						   <span className="font-semibold text-indigo-700">For Recruiters:</span> Post jobs, organize candidates with drag-and-drop kanban boards, and automate assessments for faster, smarter hiring.<br />
-						   <span className="font-semibold text-purple-700">For Job Seekers:</span> Discover opportunities, apply with one click, and showcase your skills through interactive assessments.<br /><br />
-						   Join TalentFlow and experience the future of hiring—where simplicity meets power.
-					   </p>
+					<p className="mt-3 max-w-md sm:max-w-2xl mx-auto text-base sm:text-lg md:mt-5 md:text-xl text-gray-700">
+						TalentFlow is your all-in-one hiring solution designed for modern teams and ambitious job seekers. Effortlessly manage job postings, track candidates through every stage, and create smart assessments to find the perfect fit. Our intuitive platform streamlines recruitment, saves time, and helps you build winning teams with confidence.<br /><br />
+						<span className="font-semibold text-indigo-700">For Recruiters:</span> Post jobs, organize candidates with drag-and-drop kanban boards, and automate assessments for faster, smarter hiring.<br />
+						<span className="font-semibold text-purple-700">For Job Seekers:</span> Discover opportunities, apply with one click, and showcase your skills through interactive assessments.<br /><br />
+						Join TalentFlow and experience the future of hiring—where simplicity meets power.
+					</p>
 
-					<div className="mt-8 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
+					<div className="mt-8 flex flex-col gap-4 sm:flex-row sm:gap-4 justify-center">
 						<Button
 							size="lg"
+							className="w-full sm:w-auto"
 							onClick={() => {
 								setUserType("recruiter");
 								setIsSignInModalOpen(true);
@@ -45,6 +46,7 @@ function HomePage({ setIsLoggedIn }) {
 						<Button
 							size="lg"
 							variant="secondary"
+							className="w-full sm:w-auto"
 							onClick={() => {
 								setUserType("candidate");
 								setIsSignInModalOpen(true);
@@ -55,9 +57,10 @@ function HomePage({ setIsLoggedIn }) {
 					</div>
 
 					{/* Features Section */}
-					<div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-						<div className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
-							<div className="w-12 h-12 mx-auto bg-indigo-100 rounded-full flex items-center justify-center">
+					<div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+						<div className="p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+							<div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
+								{/* ...existing code... */}
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									className="h-6 w-6 text-indigo-600"
@@ -73,17 +76,17 @@ function HomePage({ setIsLoggedIn }) {
 									/>
 								</svg>
 							</div>
-							<h3 className="mt-4 text-lg font-medium text-gray-900">
+							<h3 className="mt-4 text-base sm:text-lg font-medium text-gray-900 text-center">
 								Job Management
 							</h3>
-							<p className="mt-2 text-sm text-gray-500">
-								Create, edit, and manage job postings with ease. Use
-								drag-and-drop to prioritize positions.
+							<p className="mt-2 text-sm text-gray-500 text-center">
+								Create, edit, and manage job postings with ease. Use drag-and-drop to prioritize positions.
 							</p>
 						</div>
 
-						<div className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
-							<div className="w-12 h-12 mx-auto bg-indigo-100 rounded-full flex items-center justify-center">
+						<div className="p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+							<div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
+								{/* ...existing code... */}
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									className="h-6 w-6 text-indigo-600"
@@ -99,17 +102,17 @@ function HomePage({ setIsLoggedIn }) {
 									/>
 								</svg>
 							</div>
-							<h3 className="mt-4 text-lg font-medium text-gray-900">
+							<h3 className="mt-4 text-base sm:text-lg font-medium text-gray-900 text-center">
 								Candidate Tracking
 							</h3>
-							<p className="mt-2 text-sm text-gray-500">
-								Track candidates through hiring stages with our intuitive kanban
-								board interface.
+							<p className="mt-2 text-sm text-gray-500 text-center">
+								Track candidates through hiring stages with our intuitive kanban board interface.
 							</p>
 						</div>
 
-						<div className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
-							<div className="w-12 h-12 mx-auto bg-indigo-100 rounded-full flex items-center justify-center">
+						<div className="p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+							<div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
+								{/* ...existing code... */}
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									className="h-6 w-6 text-indigo-600"
@@ -125,12 +128,11 @@ function HomePage({ setIsLoggedIn }) {
 									/>
 								</svg>
 							</div>
-							<h3 className="mt-4 text-lg font-medium text-gray-900">
+							<h3 className="mt-4 text-base sm:text-lg font-medium text-gray-900 text-center">
 								Smart Assessments
 							</h3>
-							<p className="mt-2 text-sm text-gray-500">
-								Create custom assessments with various question types and
-								automated scoring.
+							<p className="mt-2 text-sm text-gray-500 text-center">
+								Create custom assessments with various question types and automated scoring.
 							</p>
 						</div>
 					</div>
@@ -138,29 +140,29 @@ function HomePage({ setIsLoggedIn }) {
 			</div>
 
 			{/* Sign In Modal */}
-			   <Modal
-				   isOpen={isSignInModalOpen}
-				   onClose={() => setIsSignInModalOpen(false)}
-				   title={`Sign in as ${
-					   userType === "recruiter" ? "Recruiter" : "Job Seeker"
-				   }`}
-			   >
-				   <div className="flex flex-col items-center space-y-6 py-6">
-					   <Button
-						   size="lg"
-						   onClick={handleSignIn}
-					   >
-						   Continue as {userType === "recruiter" ? "Recruiter" : "Job Seeker"}
-					   </Button>
-					   <Button
-						   type="button"
-						   variant="secondary"
-						   onClick={() => setIsSignInModalOpen(false)}
-					   >
-						   Cancel
-					   </Button>
-				   </div>
-			   </Modal>
+			<Modal
+				isOpen={isSignInModalOpen}
+				onClose={() => setIsSignInModalOpen(false)}
+				title={`Sign in as ${userType === "recruiter" ? "Recruiter" : "Job Seeker"}`}
+			>
+				<div className="flex flex-col items-center space-y-6 py-6">
+					<Button
+						size="lg"
+						className="w-full"
+						onClick={handleSignIn}
+					>
+						Continue as {userType === "recruiter" ? "Recruiter" : "Job Seeker"}
+					</Button>
+					<Button
+						type="button"
+						variant="secondary"
+						className="w-full"
+						onClick={() => setIsSignInModalOpen(false)}
+					>
+						Cancel
+					</Button>
+				</div>
+			</Modal>
 		</div>
 	);
 }
